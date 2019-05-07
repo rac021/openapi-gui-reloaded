@@ -1,0 +1,121 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": " Desctiption CDCArkhineo",
+    "version": "1.0.0",
+    "title": "Swagger cdcArkhineo",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": {
+      "email": "admin@cdcarkhineo.fr"
+    },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "host": "localhost:9380",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "CDC Arkhineo",
+      "description": "Description... Archivage ...",
+      "externalDocs": {
+        "description": "Find out more",
+        "url": "https://cdcarkhineo.fr"
+      }
+    },
+    {
+      "name": "store",
+      "description": "Access to Petstore orders"
+    },
+    {
+      "name": "user",
+      "description": "Operations about user",
+      "externalDocs": {
+        "description": "Find out more about our store",
+        "url": "https://cdcarkhineo.fr"
+      }
+    }
+  ],
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "paths": {
+    "/afp/clients/{clientId}/cfes/{cfeId}/sections": {
+      "post": {
+        "tags": [
+          "Section Creation"
+        ],
+        "summary": "Add new Section by AFP",
+        "description": "<i><b>test</i></b>",
+        "operationId": "AddSectionAction",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "clientId",
+            "in": "path",
+            "description": "ID ofthe client",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "cfeId",
+            "in": "path",
+            "description": "ID of the cfe",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ARK_ROLE",
+            "in": "header",
+            "description": "role",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "ARK_USER",
+            "in": "header",
+            "description": "role",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "in": "query",
+            "description": "name of the section",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "compartmentalized",
+            "in": "query",
+            "description": "is the section compartmentalized",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "sectionProvisionId",
+            "in": "query",
+            "description": "provisioning ID",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          },
+          "400": {
+            "description": "Invalid ID"
+          }
+        }
+      }
+    }
+  }
+}
