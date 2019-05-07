@@ -1,4 +1,7 @@
 
+
+./open_api_deployer.sh api.yaml
+
 I - Generation du Yaml 
 
    - Jackson pour la Serialization / Deserialization 
